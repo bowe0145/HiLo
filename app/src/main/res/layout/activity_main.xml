@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.algonquincollege.bowe0145.hilo.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_swift"
+        android:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_textView" />
+
+    <EditText
+        android:id="@+id/editTextGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:numeric="signed"
+        android:password="false"
+        android:phoneNumber="false"
+        android:singleLine="true"
+        android:textColor="@color/colorTextDark" />
+
+    <Button
+        android:id="@+id/buttonGuess"
+        style="@android:style/Widget.DeviceDefault.Button"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:importantForAccessibility="yes"
+        android:keepScreenOn="true"
+        android:text="Guess"
+        android:textColor="@color/colorTextDark" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:longClickable="true"
+        android:text="Reset"
+        android:textColor="@color/colorTextDark" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HiLo</string>
+    <string name="guess_textView">Guess a number</string>
+    <string name="guessTextHint">Guess a number</string>
+    <string name="buttonGuessText">Guess</string>
+    <string name="buttonResetText">Reset</string>
+
+    <string name="action_about">About</string>
+    <string name="author" translatable="false">Ryan Bowes (bowe0145)</string>
+</resources>
