@@ -7,7 +7,9 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 /**
- * Created by ryan on 2017-09-29.
+ * To create an about dialog in the HiLo application
+ *
+ * @author Ryan Bowes (bowe0145@algonquinlive.com)
  */
 
 public class AboutDialogFragment extends DialogFragment {
@@ -18,7 +20,6 @@ public class AboutDialogFragment extends DialogFragment {
 
         // Decorate our About dialog
         builder.setTitle(R.string.action_about)
-                //TODO replace with your name + userID
                 .setMessage(R.string.author)
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

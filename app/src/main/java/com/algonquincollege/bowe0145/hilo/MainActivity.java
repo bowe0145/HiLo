@@ -1,8 +1,9 @@
 package com.algonquincollege.bowe0145.hilo;
 
 /**
- *  To implement, test and deploy a guess a number Android app
- *  @author Ryan Bowes (bowe0145@algonquinlive.com)
+ * To implement, test and deploy a guess a number Android app
+ *
+ * @author Ryan Bowes (bowe0145@algonquinlive.com)
  */
 
 import android.app.Activity;
@@ -27,15 +28,16 @@ public class MainActivity extends Activity {
     boolean hasWon = false;
 
     // Returns the random number and creates one (as well as resets guesses) if it doesn't exist
-    public int getRandomNumber () {
+    public int getRandomNumber() {
         if (theNumber != 0) {
             return theNumber;
         } else {
             return getRandomNumber(true);
         }
     }
+
     // This creates a new random number and resets the guesses (Essentially all of the reset logic)
-    public int getRandomNumber (boolean newNum) {
+    public int getRandomNumber(boolean newNum) {
         // I should check the value of the argument but it's literally never going to be used
         int min = 1;
         int max = 1000;
@@ -48,7 +50,7 @@ public class MainActivity extends Activity {
     }
 
     // Using the variable userGuess here. Because it's called for in the assignment
-    public void winType (int userGuess) {
+    public void winType(int userGuess) {
         //if the user takes 5 or less guesses, display a Toast message: "Superior win!";
         // if the user takes 6 to 10 guesses, display a Toast message: "Excellent win!";
         // if the user takes more than 10 guesses, display a Toast message: "Please Reset!"
@@ -61,7 +63,7 @@ public class MainActivity extends Activity {
         // The guess button will only display the "Please Reset" message if the user takes more than 10 guesses.
         // It will not recognize correct guesses after this point.
         if (guesses > 10 || hasWon) {
-            Toast.makeText( getApplicationContext(),  "Please Reset!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please Reset!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -72,7 +74,7 @@ public class MainActivity extends Activity {
             // They won; display a win message
             hasWon = true;
             if (guesses <= 5) {
-                Toast.makeText( getApplicationContext(),  "Superior win!", Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getApplicationContext(), "Superior win!", Toast.LENGTH_SHORT).show();
                 return;
             } else if (guesses >= 6 && guesses <= 10) {
                 Toast.makeText(getApplicationContext(), "Excellent win!", Toast.LENGTH_SHORT).show();
@@ -97,9 +99,9 @@ public class MainActivity extends Activity {
         Random rnd = new Random();
 
         // Create references to each UI element that we'll need
-        final Button guessButton = (Button)findViewById(R.id.buttonGuess);
-        final Button resetButton = (Button)findViewById(R.id.buttonReset);
-        final EditText guessEditText = (EditText)findViewById(R.id.editTextGuess);
+        final Button guessButton = findViewById(R.id.buttonGuess);
+        final Button resetButton = findViewById(R.id.buttonReset);
+        final EditText guessEditText = findViewById(R.id.editTextGuess);
 
         // Guess Button Click Listener
         guessButton.setOnClickListener(new View.OnClickListener() {
@@ -176,7 +178,7 @@ public class MainActivity extends Activity {
         resetButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                Toast.makeText( getApplicationContext(),  Integer.toString(getRandomNumber()), Toast.LENGTH_LONG ).show();
+                Toast.makeText(getApplicationContext(), Integer.toString(getRandomNumber()), Toast.LENGTH_LONG).show();
 
                 // Returning true so that it doesn't propagate
                 return true;
